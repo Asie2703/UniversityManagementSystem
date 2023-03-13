@@ -1,3 +1,10 @@
+/*
+ * Classroom.java
+ * This is my worker class
+ * @author Mthandeni Mbobo - 218223579
+ * 12 March 2023
+*/
+
 package za.ac.cput.domain;
 
 public class Classroom {
@@ -8,9 +15,12 @@ public class Classroom {
     private double roomNo;
 
     //my constructor
-    private Classroom(){
-        //
-        //
+    public Classroom(String classroomId, String campus, String building, int floorNo, double roomNo){
+        this.classroomId = classroomId;
+        this.campus = campus;
+        this.building = building;
+        this.floorNo = floorNo;
+        this.roomNo = roomNo;
     }
 
     //my getters
