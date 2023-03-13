@@ -9,6 +9,8 @@ package za.ac.cput.domain;
 
 import org.junit.jupiter.api.*;
 
+import java.util.concurrent.TimeUnit;
+
 class ClassroomTest {
     private static Classroom classroom1;
     private static Classroom classroom2;
@@ -56,8 +58,18 @@ class ClassroomTest {
     }
 
     //Timeouts test
-
+    @Test
+    @Timeout(value = 25, unit = TimeUnit.MILLISECONDS)
+    public void testIdentity(){
+        Assertions.assertSame(classroom3, classroom3);
+        Assertions.assertNotSame(classroom1, classroom2);
+    }
 
     //Disable test
-    
+    @Test
+    @Disabled
+    public void testEquality() {
+        Assertions.assertEquals(classroom1, classroom2);
+        Assertions.assertEquals(classroom2, classroom3);
+    }
 }
