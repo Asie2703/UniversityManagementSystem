@@ -1,5 +1,4 @@
 package za.ac.cput.domain;
-//Asive Sibeko 219475296
 
 public class Student {
     private String studentId;
@@ -7,7 +6,7 @@ public class Student {
     private String studentLName;
     private String studentEmail;
 
-    private Student(){
+    public Student(){
 
     }
 
@@ -15,16 +14,32 @@ public class Student {
         return studentId;
     }
 
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
+    }
+
     public String getStudentFName() {
         return studentFName;
+    }
+
+    public void setStudentFName(String studentFName) {
+        this.studentFName = studentFName;
     }
 
     public String getStudentLName() {
         return studentLName;
     }
 
+    public void setStudentLName(String studentLName) {
+        this.studentLName = studentLName;
+    }
+
     public String getStudentEmail() {
         return studentEmail;
+    }
+
+    public void setStudentEmail(String studentEmail) {
+        this.studentEmail = studentEmail;
     }
 
     @Override
